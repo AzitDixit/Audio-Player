@@ -1,0 +1,26 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <style name="MySeekBar" parent="Widget.AppCompat.SeekBar">
+        <item name="android:progressBackgroundTint">#030303</item>
+        <item name="android:progressTint">#5B34A2</item>
+        <item name="android:thumbTint">#004D40</item>
+    </style>
+
+    <style name="SearchViewStyle" parent="SearchView">
+        <!-- Gets rid of the search icon -->
+        <item name="searchIcon">@drawable/search</item>
+        <item name="android:editTextColor">@android:color/white</item>
+        <item name="android:textColorHint">@android:color/white</item>
+
+    </style>
+
+    <style name="SearchView">SearchView</style>
+
+</resources>

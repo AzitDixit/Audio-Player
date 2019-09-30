@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Music Player"
+        android:fontFamily="cursive"
+        android:textSize="40dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:textColor="#99FF00"
+        android:textStyle="bold"
+       />
+
+    <ImageButton
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignRight="@id/text"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="26dp"
+        android:layout_marginRight="-83dp"
+
+        android:background="@drawable/music" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/player"
+        android:layout_width="275dp"
+        android:layout_height="275dp"
+        app:lottie_fileName="player.json"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        android:layout_below="@id/text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"/>
+    <RelativeLayout
+        android:id="@+id/seekbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/player"
+        android:layout_marginTop="90dp">
+
+        <SeekBar
+            android:id="@+id/bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/MySeekBar"
+            />
+        <TextView
+            android:id="@+id/start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bar"
+            android:layout_marginStart="10dp"
+            android:text=" "
+            android:textColor="#ffffff"/>
+
+        <TextView
+            android:id="@+id/end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bar"
+            android:layout_alignBaseline="@id/start"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="10dp"
+            android:text=" "
+            android:textColor="#ffffff" />
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/attribute"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/seekbar"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/recent"
+            android:layout_marginRight="100dp"/>
+        <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/fav"/>
+        <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:onClick="playList"
+            android:background="@drawable/song"
+            android:layout_marginLeft="100dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_below="@id/attribute"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <ImageButton
+            android:id="@+id/backword"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/backword"
+            android:layout_marginRight="20dp"/>
+        <ImageButton
+            android:id="@+id/privious"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:background="@drawable/privious"
+            />
+        <ImageButton
+            android:id="@+id/play"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/play"
+            />
+        <ImageButton
+            android:id="@+id/next"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:background="@drawable/next"
+            />
+        <ImageButton
+            android:id="@+id/forword"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/forword"
+            android:layout_marginLeft="20dp"/>
+    </LinearLayout>
+
+
+
+</RelativeLayout>
